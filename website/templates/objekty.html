@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+
+{% block title %} BM - Objekty {% endblock %}
+
+{% block objektyactive %}active{% endblock objektyactive %}
+
+{% block histories %}
+  {% for history in histories %}
+  <li><a class="dropdown-item" href="/historie/{{history.name}}">{{history.name}}</a></li>
+    {% if forloop.counter == 1 %}
+    <li><hr class="dropdown-divider"></li>
+    {% endif %}
+  {% endfor %}
+{% endblock histories %}
+
+{% block galleries %}
+  {% for gallery in galleries %}
+  <li><a class="dropdown-item" href="/fotogalerie/{{gallery.name}}">{{gallery.name}}</a></li>
+  {% endfor %}
+{% endblock galleries %}
+
+{% block content %}
+
+<div class="container fade-in">
+    <h1 class="text-center m-3 mt-4 mb-4">Objekty KVH Opava</h1>
+
+    <div class="m-2 my-3 obj">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="w-100 rounded-bottom rounded-4 objcrop" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/objops25.jpg" alt="Pěchotní srub OP–S 25 U Trigonometr">
+          </div>
+          <div class="carousel-caption py-0">
+            <p class="objcap d-none d-md-block">Pěchotní srub OP–S 25 "U Trigonometr"</p>
+            <p class="objcap d-md-none">OP–S 25 "U Trigonometr"</p>
+            <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#ops25" aria-expanded="false" aria-controls="collapseExample">
+            informace
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="collapse" id="ops25">
+        <div class="card card-body rounded-bottom rounded-0 info">
+          <ul class="px-4">
+            <li>oboustranný, dvoupodlažní pěchotní srub, vybetonován ve dnech 2. až 7. května 1938 v III. třídě odolnosti</li>
+            <li>celková kubatura: 1 807 m³, měl být osazen dvěma zvony "ZN" pro LK vz. 26</li>
+            <li>levá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37 a zbraň "M" - kulometné dvojče TK vz. 37 </li>
+            <li>pravá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37 a dvojče TK vz. 37 - zbraň "M"</li>
+            <li>pro ochranu vstupu a střílen je vyzbrojen čtyřmi lehkými kulomety vz. 26</li>
+          </ul>
+            Objekt přežil válečné období bez většího poškození. Teprve v roce 1988 byl pracovníky tehdejšího Muzea revolučních bojů Ostrava zbaven střílen L1. Tyto se v současné době nacházejí v areálu Slezského zemského muzea v Darkovičkách. Na objektu číslo 25 tak byla osazena střílna získaná z francouzského muzea v Le Gua a druhá ze srubu OP-S 28. Ta byla pracovníky Muzea revolučních bojů v roce 1988 při trhání poškozena, a z důvodu nevyužití po roce 1998, vrácena našemu klubu. Poškození střílny bylo opraveno firmou ČV Prototyp Ostrava. Objekt je osazen nepříslušnými zvony ZN dovezenými a osazenými německou armádou za okupace. Pochází ze srubů MO-S 9 a 17.
+            Interiér objektu tvoří hlavní muzejní expozici KVH Opava.
+        </div>
+      </div>
+    </div>
+
+    <div class="m-2 my-3 obj">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="w-100 rounded objcrop" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/objops26.jpg" alt="Pěchotní srub OP-S 26 Milostovice">
+          </div>
+          <div class="carousel-caption py-0">
+            <p class="objcap d-none d-md-block">Pěchotní srub OP-S 26 "Milostovice"</p>
+            <p class="objcap d-md-none">OP-S 26 "Milostovice"</p>
+            <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#ops26" aria-expanded="false" aria-controls="collapseExample">
+            informace
+            </button>
+          </div>
+        </div>
+    </div>
+      <div class="collapse" id="ops26">
+        <div class="card card-body rounded-bottom rounded-0 info">
+          <ul class="px-4">
+            <li>oboustranný, dvoupodlažní pěchotní srub, vybetonován ve dnech 17. až 21. května 1938 v II. třídě odolnosti</li>
+            <li>celková kubatura: 1 419 m³, osazen dvěma pěchotními zvony pro LK vz. 26</li>
+            <li>levá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37 a zbraň "M" - kulometné dvojče TK vz. 37</li>
+            <li>pravá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37 a dvojče TK vz. 37 - zbraň "M"</li>
+            <li>pro ochranu vstupu a střílen je vyzbrojen čtyřmi lehkými kulomety vz. 26</li>
+          </ul>
+          Objekt má všechny původní pancéřové prvky. Z důvodu chybějící přístupové cesty je objekt pro návštěvníky nepřístupný.
+        </div>
+      </div>
+  </div>
+
+  <div class="m-2 my-3 obj">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100 rounded objcrop" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/objops27.jpg" alt="Pěchotní srub OP-S 27 Paletovo pole">
+            </div>
+            <div class="carousel-caption py-0">
+                <p class="objcap d-none d-md-block">Pěchotní srub OP-S 27 "Paletovo pole"</p>
+                <p class="objcap d-md-none">OP-S 27 "Paletovo pole"</p>
+                <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#ops27" aria-expanded="false" aria-controls="collapseExample">
+                informace
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="ops27">
+      <div class="card card-body rounded-bottom rounded-0 info">
+        <ul class="px-4">
+          <li>oboustranný, dvoupodlažní pěchotní srub, vybetonován ve dnech 30. května až 4. června 1938 v II. třídě odolnosti</li>
+          <li>celková kubatura: 1 622 m³, osazen dvěma zvony jedním pro "ZN" a jedním "ZD"</li>
+          <li>levá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37 a zbraň "M" - kulometné dvojče TK vz. 37</li>
+          <li>pravá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37 a dvojče TK vz. 37 - zbraň "M"</li>
+          <li>pro ochranu vstupu a střílen je vyzbrojen třemi lehkými kulomety vz. 26</li>
+        </ul>
+        Objekt má zachovány všechny originální pancéřové prvky, přičemž raritou je zvon pro těžký kulomet. Z důvodu chybějící přístupové cesty je objekt pro návštěvníky nepřístupný.
+        Po dohodě s majitelem je objekt zabezpečen.
+      </div>
+    </div>
+  </div>
+
+  <div class="row m-2 my-3">
+    <div class="col-12 col-lg-6 p-0 pe-lg-1 mb-2 my-lg-0 obj">
+      <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="w-100 rounded" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/obj318.jpg" alt="Objekt III/318/A-140Z">
+            </div>
+            <div class="carousel-caption py-0">
+              <p class="objcap">Objekt III/318/A-140Z</p>
+              <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#rop56" aria-expanded="false" aria-controls="collapseExample">
+              informace
+              </button>
+            </div>
+          </div>
+      </div>
+        <div class="collapse" id="rop56">
+          <div class="card card-body rounded-bottom rounded-0 info">
+            <ul class="px-4">
+              <li>zesílený objekt lehkého typu, vybetonován v roce 1937, pod číslem 56</li>
+              <li>levá a pravá střílna jsou normálního typu</li>
+              <li>vchodová střílna je kolíčková – výrobce ZB, č. 375</li>
+              <li>výdech ventilace S, zárubně dveří R 239</li>
+            </ul>
+            Objekt je uveden do stavu po tzv. reaktivaci Československou lidovou armádou a je příležitostně zpřístupňován veřejnosti.
+          </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 p-0 ps-lg-1 mt-2 my-lg-0 obj">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="w-100 rounded" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/obj302.jpg" alt="Objekt III/302/A-160">
+          </div>
+          <div class="carousel-caption py-0">
+            <p class="objcap">Objekt III/302/A-160</p>
+            <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#rop55" aria-expanded="false" aria-controls="collapseExample">
+            informace
+            </button>
+          </div>
+        </div>
+    </div>
+        <div class="collapse" id="rop55">
+            <div class="card card-body rounded-bottom rounded-0 info">
+              <ul class="px-4">
+                <li>objekt lehkého typu, byl vybetonován v roce 1937, pod číslem 55</li>
+              </ul>
+              Do budoucna je plánováno s ohledem na část zachovalé výdřevy interiéru, uvedení objektu do předpokládaného stavu v roce 1938.
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <div class="m-2 my-3 obj">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100 rounded objcrop" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/objops18.jpg" alt="Pěchotní srub OP-S 18 U sádrovce">
+            </div>
+            <div class="carousel-caption py-0">
+                <p class="objcap d-none d-md-block">Pěchotní srub OP-S 18 "U Sádrovce"</p>
+                <p class="objcap d-md-none">OP-S 18 "U Sádrovce"</p>
+                <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#ops18" aria-expanded="false" aria-controls="collapseExample">
+                informace
+                </button>
+            </div>
+        </div>
+    </div>
+      <div class="collapse" id="ops18">
+        <div class="card card-body rounded-bottom rounded-0 info">
+          <ul class="px-4">
+            <li>oboustranný, dvoupodlažní pěchotní srub, vybetonován ve dnech 7. až 13. srpna 1937 v III. třídě odolnosti</li>
+            <li>celková kubatura: 2 100 m³, byl osazen dvěma zvony pro TK vz. 37 a jedním zvonem pozorovacím</li>
+            <li>levá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37) a zbraň "M" - kulometné dvojče TK vz. 37</li>
+            <li>pravá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37) a dvojče TK vz. 37 - zbraň "M"</li>
+            <li>pro ochranu vstupu a střílen je vyzbrojen čtyřmi lehkými kulomety vz. 26</li>
+          </ul>
+          V objektu se zachovaly takřka všechny střílny hlavních zbraní, a to obě M a jedna střílna L1. Druhá byla získána z Francouzského Saint Georges de Didone z objektu H506c.
+          V prostoru schodiště a v týlovém patře jsou pravděpodobně německé malůvky a nápisy v němčině. 
+          Není známo, při jaké příležitosti vznikly, předpokládá se, že v rámci obsazení objektu německými ozbrojenci a jeho provizorní přípravě k poslední obraně. Od roku 2020 probíhá rekonstrukce objektu tak, aby jeho zevnějšek znovu nabyl podoby jako v roce 1938.
+          Interiér objektu zatím není veřejnosti dostupný.
+        </div>
+      </div>
+  </div>
+
+  <div class="m-2 my-3 obj">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100 rounded objcrop" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/objops21.jpg" alt="Pěchotní srub OP-S 21 Na cvičišti">
+            </div>
+            <div class="carousel-caption py-0">
+                <p class="objcap d-none d-md-block">Pěchotní srub OP-S 21 "Na Cvičišti"</p>
+                <p class="objcap d-md-none">OP-S 21 "Na Cvičišti"</p>
+                <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#ops21" aria-expanded="false" aria-controls="collapseExample">
+                informace
+                </button>
+            </div>
+        </div>
+    </div>
+      <div class="collapse" id="ops21">
+        <div class="card card-body rounded-bottom rounded-0 info">
+          <ul class="px-4">
+            <li>oboustranný, jednopodlažní pěchotní srub, vybetonován ve dnech 27. září až 2. října 1937 ve II. třídě odolnosti</li>
+            <li>celková kubatura: 1 680 m³, byl osazen dvěma pěchotními zvony pro LK vz. 26</li>
+            <li>levá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37) a zbraň "M" - kulometné dvojče TK vz. 37</li>
+            <li>pravá střelecká místnost: zbraň "L1" (4cm pevnostní kanon vz. 36 spřažený s TK v. 37) a dvojče TK vz. 37 - zbraň "M"</li>
+            <li>pro ochranu vstupu a střílen je vyzbrojen třemi lehkými kulomety vz. 26</li>
+          </ul>
+          V objektu jsou všechny střílny hlavních zbraní originály.
+          Jde o jednopodlažní objekt, vnitřní prostory jsou velice rozlehlé a členité.
+          Objekt v současné době není veřejnosti přístupný.
+        </div>
+      </div>
+  </div>
+
+  <div class="row m-2 my-3">
+  <div class="col-12 col-lg-6 p-0 pe-lg-1 mb-2 my-lg-0 obj">
+      <div class="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img class="w-100 rounded" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/objeinmann.jpg" alt="Einmannbunker">
+              </div>
+              <div class="carousel-caption py-0">
+                  <p class="objcap">Einmannbunker</p>
+                  <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#ein" aria-expanded="false" aria-controls="collapseExample">
+                  informace
+                  </button>
+              </div>
+          </div>
+      </div>
+        <div class="collapse" id="ein">
+          <div class="card card-body rounded-bottom rounded-0 info">
+            <ul class="px-4">
+              <li>kruhová železobetonová pozorovatelna pro jednoho muže s několika štěrbinovými průzory</li>
+              <li>jejich nejčastějším úkolem bylo střežení průmyslových areálů a dopravních uzlů vyklizených z důvodu nastávajícího náletu a pozorování situace při jeho průběhu za účelem snazší lokalizace míst dopadu nevybuchlých pum</li>
+              <li>skládá se ze tří částí o síle 15 – 20 centimetrů. Podstavec, obvykle zapuštěný pod úroveň terénu, válcové duté tělo o vnějším průměru asi 145 cm se vstupem a průzory a stříška</li>
+            </ul>
+            Objekt se nacházel v areálu východního nádraží v Opavě, na ulici Skladištní, jako pozůstatek druhoválečné obrany města Opavy. Při rekonstrukci nádraží v roce 2021 byl předán našemu klubu.
+          </div>
+        </div>
+  </div>
+  <div class="col-12 col-lg-6 p-0 ps-lg-1 mt-2 my-lg-0 obj">
+      <div class="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img class="w-100 rounded" src="https://bunkrmilostovice.s3.eu-central-1.amazonaws.com/objpomnik.jpg" alt="pomník legionářů milostovice">
+              </div>
+              <div class="carousel-caption py-0">
+                  <p class="objcap">pomník legionářů</p>
+                  <button class="btn btn-secondary py-1 px-2 objbut" type="button" data-bs-toggle="collapse" data-bs-target="#pom" aria-expanded="false" aria-controls="collapseExample">
+                  informace
+                  </button>
+              </div>
+          </div>
+      </div>
+      <div class="collapse" id="pom">
+        <div class="card card-body rounded-bottom rounded-0 info">
+          Pomník byl zřízen jako připomínka odhodlání našich předků bojovat za vlast. Odhalen byl 5. září 2014 za účasti významných hostů a válečných veteránů. Autory jsou akademičtí sochaři Jana a Pavel Chráskovi z Opavy.
+        </div>
+      </div>
+  </div>
+</div>
+
+</div>
+
+<style>
+  @media(max-width: 740px) {
+  .objcrop {
+    height: 216px; 
+    object-fit: cover;
+    object-position: 50% 0;
+    }
+  }
+
+  .obj {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .objbut {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .objbut:hover {
+    background-color: rgb(0, 0, 0, 0.6) !important;
+  }
+
+  .info {
+    color: rgb(40, 40, 40);
+    font-size: 0.95em;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media(min-width: 0px) {
+    .objcap {
+      text-shadow: 4px 4px 6px #000000; 
+      font-size: 1.2em;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .objbut {
+      font-size: 0.9em;
+    }
+  }
+
+  @media(min-width: 768px) {
+    .objcap {
+      font-size: 1.4em;
+    }
+  }
+
+  @media(min-width: 992px) {
+    .objcap {
+      font-size: 1.8em;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    .objcap {
+      font-size: 2.2em;
+    }
+    .objbut {
+      font-size: 1em;
+    }
+  }
+
+</style>
+
+{% endblock %} 

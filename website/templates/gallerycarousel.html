@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %} BM - {{gallery_name}} ({{number}}/{{len}})  {% endblock %}
+
+{% block galleryactive %}active{% endblock galleryactive %}
+
+{% block histories %}
+  {% for history in histories %}
+    <li><a class="dropdown-item" href="/historie/{{history.name}}">{{history.name}}</a></li>
+    {% if forloop.counter == 1 %}
+        <li><hr class="dropdown-divider"></li>
+    {% endif %}
+  {% endfor %}
+{% endblock histories %}
+
+{% block galleries %}
+    {% for gallery in galleries %}
+        <li><a class="dropdown-item" href="../{{gallery.name}}">{{gallery.name}}</a></li>
+    {% endfor %}
+{% endblock galleries %}
+
+{% block content %}
+
+<div class="row m-1 p-1">
+    <div class="col-xl-2 col-lg-1"></div>
+    <div class="col-xl-8 col-lg-10 col-12">
+        <div class="row">
+            <div class="col-12 col-lg-5">
+                <h6 style="color: rgb(78, 78, 78);">fotogalerie/{{gallery_name}}/{{curr_img.image.name}}</h6>
+            </div>
+            <div class="col-12 col-lg-2 text-center mx-0 px-0 d-none d-lg-block">
+                <h6 style="color: rgb(78, 78, 78);"><b class="text-center">({{number}}/{{len}})</b> </h6>
+            </div>
+            <div class="col-12 col-lg-5"></div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100 rounded" src="{{curr_img.compressed.url}}" alt="{{curr_img.description}}">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <p style="text-shadow: 2px 2px 3px #000000; font-size: 1.2em;">{{curr_img.description}}</p>
+                </div>
+            </div>
+            <a href="{{prev_img.image.name}}">
+                <button class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+            </a>
+            <a href="{{next_img.image.name}}">
+                <button class="carousel-control-next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </a>
+        </div>
+        <div class="d-md-none text-center"> <h4>{{curr_img.description}}</h4></div>
+        <div class="row sticky-bottom mb-auto">
+            <div class="col order-1 col-6 col-lg-4 col-md-4">
+                <div class="my-3 text-end">
+                    <a href="{{prev_img.image.name}}" class="btn mybut rounded-end rounded-5" style="width: 120px" role="button" aria-pressed="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+                            <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+                        </svg>
+                        zpět
+                    </a>
+                </div>
+            </div>
+            <div class="col order-3 order-md-2 order-md-3 col-12 col-lg-4 col-md-4">
+                <div class="my-3 text-center">
+                    <a href="../{{gallery_name}}" class="btn mybut" role="button" aria-pressed="true">návrat do fotogalerie {{gallery_name}}</a>
+                </div>
+            </div>
+            <div class="col order-2 order-md-2 order-md-3 col-6 col-md-4 col-md-4">
+                <div class="my-3">
+                    <a href="{{next_img.image.name}}" class="btn mybut rounded-start rounded-5" style="width: 120px" role="button" aria-pressed="true">
+                        další
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                            <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-1"></div>
+</div>
+
+ <style>
+    .mybut {
+        color: white;
+        background-color: rgba(65, 117, 72, 0.85);
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+    .mybut:hover {
+        color: white;
+        background-color: rgb(24, 77, 32);
+        border-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+ </style>
+
+{% endblock content %}
